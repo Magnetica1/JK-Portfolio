@@ -5,7 +5,7 @@ import *as THREE from "three"
 import {OrbitControls} from "three/examples/jsm/controls/OrbitControls.js";
 
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
-import { Loader } from "three";
+import { CubeCamera, Loader } from "three";
 
 //Setup main elements
 const scene = new THREE.Scene();
@@ -38,29 +38,35 @@ const controls = new OrbitControls(camera, renderer.domElement)
 //add objects
 scene.add(torus, pointLight, floodLight)
 
-
+var axis = new THREE.AxesHelper(2);
+scene.add(axis);
 
 //adjust position of objects
 pointLight.position.set(0, 10, 20)
 torus.translateY(0);
 
-
 const loader = new GLTFLoader();
 
-loader.load( './htmlLogo.glb', function ( gltf ) {
-	scene.add( gltf.scene );
-  gltf.scene.rotateY(200);
-}, 
-//display any errors in the console
-undefined, function ( error ) {
-	console.error( error );
-});
+var html = loader.load( './htmlLogo.glb', function ( html ) {
+	scene.add( html.scene );
+  html.scene.rotateY(0);
+})
 
+var js =loader.load( './jsLogo.glb', function ( js ) {
+	scene.add( js.scene );
+  js.scene.rotateY(0);
+})
+
+var css = loader.load( './cssLogo.glb', function ( css ) {
+	scene.add( css.scene );
+  css.scene.rotateY(0);
+});
 //Is like a gameloop and updates the website
 function animate() {
   requestAnimationFrame(animate);
   //render the canvas(renderer)
   renderer.render(scene, camera)
+
 }
 
 animate();
