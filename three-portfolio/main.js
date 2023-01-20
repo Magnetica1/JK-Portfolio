@@ -5,7 +5,7 @@ import *as THREE from "three"
 import {OrbitControls} from "three/examples/jsm/controls/OrbitControls.js";
 
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
-import { CubeCamera, Loader } from "three";
+import { CubeCamera, Group, Loader } from "three";
 
 //Setup main elements
 const scene = new THREE.Scene();
@@ -45,16 +45,22 @@ scene.add(axis);
 pointLight.position.set(0, 10, 20)
 torus.translateY(0);
 
+const group = new THREE.Mesh();
+
 const loader = new GLTFLoader();
 
-var html = loader.load( './htmlLogo.glb', function ( html ) {
-	scene.add( html.scene );
-  html.scene.rotateY(0);
-})
+scene.add(group);
 
-var js =loader.load( './jsLogo.glb', function ( js ) {
-	scene.add( js.scene );
-  js.scene.rotateY(0);
+group.rotation.set(0, 0, 0)
+
+loader.load( './htmlLogo.glb', function ( gltf ) {
+  const html = gltf.scene
+  group.add(html)
+  console.log(html)
+});
+loader.load( './jsLogo.glb', function ( gltf ) {
+  const js = gltf.scene; 
+  group.add(js)
 })
 
 var css = loader.load( './cssLogo.glb', function ( css ) {
