@@ -36,7 +36,7 @@ const floodLight = new THREE.AmbientLight(0xf2b179, 0.4);
 const controls = new OrbitControls(camera, renderer.domElement)
 
 //add objects
-scene.add(torus, pointLight, floodLight)
+scene.add(pointLight, floodLight)
 
 var axis = new THREE.AxesHelper(2);
 scene.add(axis);
@@ -46,33 +46,41 @@ pointLight.position.set(0, 10, 20)
 torus.translateY(0);
 
 const group = new THREE.Mesh();
+const rotateAround = new THREE.Mesh();
 
 const loader = new GLTFLoader();
 
-scene.add(group);
+scene.add(group, rotateAround);
 
-group.rotation.set(0, 0, 0)
+group.rotation.set(0, 4.7, 0)
+group.scale.set(10, 10 ,10)
+group.position.set(0, 0, 0)
+rotateAround.scale.set(10, 10 ,10)  
 
 loader.load( './htmlLogo.glb', function ( gltf ) {
   const html = gltf.scene
   group.add(html)
-  console.log(html)
 });
 loader.load( './jsLogo.glb', function ( gltf ) {
   const js = gltf.scene; 
-  group.add(js)
-})
-
-var css = loader.load( './cssLogo.glb', function ( css ) {
-	scene.add( css.scene );
-  css.scene.rotateY(0);
+  rotateAround.add(js)
+  js.translateZ(-0.4)
 });
+
+loader.load( './cssLogo.glb', function ( gltf ) {
+  const css = gltf.scene
+  rotateAround.add(css)
+  css.translateZ(0.4)
+});
+
+
 //Is like a gameloop and updates the website
 function animate() {
   requestAnimationFrame(animate);
   //render the canvas(renderer)
   renderer.render(scene, camera)
 
+  rotateAround.rotateY(0.02)
 }
 
 animate();
