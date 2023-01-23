@@ -38,9 +38,6 @@ const controls = new OrbitControls(camera, renderer.domElement)
 //add objects
 scene.add(pointLight, floodLight)
 
-var axis = new THREE.AxesHelper(2);
-scene.add(axis);
-
 //adjust position of objects
 pointLight.position.set(0, 10, 20)
 torus.translateY(0);
@@ -64,23 +61,30 @@ loader.load( './htmlLogo.glb', function ( gltf ) {
 loader.load( './jsLogo.glb', function ( gltf ) {
   const js = gltf.scene; 
   rotateAround.add(js)
-  js.translateZ(-0.4)
 });
 
 loader.load( './cssLogo.glb', function ( gltf ) {
   const css = gltf.scene
   rotateAround.add(css)
-  css.translateZ(0.4)
 });
 
+loader.load( './github.glb', function ( gltf ) {
+  const github = gltf.scene
+  github.rotateY(86.4)
+  github.position.set(0, 0, 0)
+  scene.add(github)
+});
+
+function onScroll() {
+  
+}
 
 //Is like a gameloop and updates the website
 function animate() {
+  rotateAround.rotateY(0.02);
   requestAnimationFrame(animate);
   //render the canvas(renderer)
   renderer.render(scene, camera)
-
-  rotateAround.rotateY(0.02)
 }
 
 animate();
