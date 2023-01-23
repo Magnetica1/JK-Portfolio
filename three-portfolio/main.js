@@ -22,6 +22,8 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 //change camera position
 camera.position.setZ(30);
 
+const positioner = new THREE.AxesHelper
+scene.add(positioner)
 
 const geometry = new THREE.TorusGeometry(10, 2, 16, 100)
 //This material does not need any lights to be rendered
@@ -73,6 +75,13 @@ loader.load( './github.glb', function ( gltf ) {
   github.rotateY(86.4)
   github.position.set(0, 0, 0)
   scene.add(github)
+});
+
+loader.load( './unity.glb', function ( gltf ) {
+  const unity = gltf.scene
+  unity.rotateY(86.4);
+  unity.position.set(0, 0, 15);
+  scene.add(unity)
 });
 
 function onScroll() {
