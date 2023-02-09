@@ -5,7 +5,7 @@ import *as THREE from "three"
 import {OrbitControls} from "three/examples/jsm/controls/OrbitControls.js";
 
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
-import { CubeCamera, Group, Loader } from "three";
+import { Camera, CubeCamera, Group, Loader } from "three";
 
 //Setup main elements
 const scene = new THREE.Scene();
@@ -20,7 +20,9 @@ const renderer = new THREE.WebGLRenderer({
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
 //change camera position
-camera.position.setZ(30);
+camera.position.set(0, 15, 25);
+camera.rotateZ(11)
+
 
 const positioner = new THREE.AxesHelper
 scene.add(positioner)
@@ -35,7 +37,7 @@ const pointLight = new THREE.PointLight(0xffffff, 2, 100)
 const floodLight = new THREE.AmbientLight(0xf2b179, 0.4);
 
 //set the constrols
-const controls = new OrbitControls(camera, renderer.domElement)
+// const controls = new OrbitControls(camera, renderer.domElement)
 
 //add objects
 scene.add(pointLight, floodLight)
@@ -46,6 +48,7 @@ torus.translateY(0);
 
 const group = new THREE.Mesh();
 const rotateAround = new THREE.Mesh();
+const controls = new OrbitControls(camera, renderer.domElement)
 
 const loader = new GLTFLoader();
 
@@ -83,15 +86,27 @@ loader.load( './unity.glb', function ( gltf ) {
   unity.position.set(0, 0, 15);
   scene.add(unity)
 });
+ 
+function moveCamera() {
+  const t = document.body.getBoundingClientRect().top;
 
-function onScroll() {
-  
+  camera.position.z = t * -0.03;
+  if(t <= -1000) {
+    camera.rotation.y = t * 0.002;
+  }
+  console.log(t)
 }
+
+document.body.onscroll = moveCamera;
+moveCamera();
+
+
+moveCamera();
 
 //Is like a gameloop and updates the website
 function animate() {
   rotateAround.rotateY(0.02);
-  requestAnimationFrame(animate);
+  requestAnimationFrame(animate); 
   //render the canvas(renderer)
   renderer.render(scene, camera)
 }
