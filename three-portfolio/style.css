@@ -5,6 +5,7 @@ canvas {
 }
 main {
   position: absolute;
+  color: transparent;
 }
 
 .title {
