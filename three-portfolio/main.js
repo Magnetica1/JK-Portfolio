@@ -37,17 +37,20 @@ const torus = new THREE.Mesh(geometry, material);
 //Create a light (0x means hex code(like pound))(light helper to find light)
 const pointLight = new THREE.PointLight(0xffffff, 2, 100)
 const pointLight2 = new THREE.PointLight(0xffffff, 1, 100)
+const pointLight3 = new THREE.PointLight(0xffffff, 2, 100)
+const pointLight4 = new THREE.PointLight(0xffffff, 1, 100)
 const floodLight = new THREE.AmbientLight(0xf2b179, 0.4);
-
-//set the constrols
+// const pointLightHelper = new THREE.PointLightHelper( pointLight4, 1);//set the constrols
 // const controls = new OrbitControls(camera, renderer.domElement)
 
 //add objects
-scene.add(pointLight, floodLight, pointLight2)
+scene.add(pointLight, pointLight2, pointLight3, pointLight4, floodLight)
 
 //adjust position of objects
-pointLight.position.set(0, 10, 20)
-pointLight2.position.set(-6.5, 5, 50)
+pointLight.position.set(0, 10, 20);
+pointLight2.position.set(-6.5, 5, 50);
+pointLight3.position.set(60, 0, 0);
+pointLight4.position.set(60, 10, 30);
 torus.translateY(0);
 
 
@@ -70,15 +73,15 @@ rotateAround.scale.set(10, 10 ,10)
 // 3D OBJECT LOADER
 
 //TRIO
-loader.load( './htmlLogo.glb', function ( gltf ) {
+loader.load( './carousel1/htmlLogo.glb', function ( gltf ) {
   const html = gltf.scene
   group.add(html)
 });
-loader.load( './jsLogo.glb', function ( gltf ) {
+loader.load( './carousel1/jsLogo.glb', function ( gltf ) {
   const js = gltf.scene; 
   rotateAround.add(js)
 });
-loader.load( './cssLogo.glb', function ( gltf ) {
+loader.load( './carousel1/cssLogo.glb', function ( gltf ) {
   const css = gltf.scene
   rotateAround.add(css)
 });
@@ -91,7 +94,7 @@ loader.load( './3dText/trioText.glb', function ( gltf ) {
 });
 
 //Unity
-loader.load( './unity.glb', function ( gltf ) {
+loader.load( './carousel1/unity.glb', function ( gltf ) {
   const unity = gltf.scene
   unity.rotation.set(-38.7, -1.5, 0)
   unity.position.set(0, 0, 25);
@@ -105,7 +108,7 @@ loader.load( './3dText/unityText.glb', function ( gltf ) {
   scene.add(uText)
 });
 //C#
-loader.load( './CS.glb', function ( gltf ) {
+loader.load( './carousel1/CS.glb', function ( gltf ) {
   const CS = gltf.scene
   CS.position.set(0, 30, 75);
   CS.scale.set(7, 7, 7);
@@ -121,7 +124,7 @@ loader.load( './3dText/CSText.glb', function ( gltf ) {
 });
 
 //Github
-loader.load( './github.glb', function ( gltf ) {
+loader.load( './carousel1/github.glb', function ( gltf ) {
   const github = gltf.scene
   github.position.set(0, 60, 40)
   github.rotation.set(0, 4.7, 4.5)
@@ -137,14 +140,7 @@ loader.load( './3dText/gitText.glb', function ( gltf ) {
 });
 
 //Bash
-loader.load( './3dText/bashText.glb', function ( gltf ) {
-  const bash = gltf.scene
-  bash.position.set(-2.5, 30, 20);
-  bash.scale.set(3, 3, 3);
-  bash.rotation.set(2.84, 0, 0)
-  scene.add(bash)
-});
-loader.load( './bash.glb', function ( gltf ) {
+loader.load( './carousel1/bash.glb', function ( gltf ) {
   const bash = gltf.scene
   bash.position.set(0, 30, 13);
   bash.scale.set(4.5, 4.5, 4.5);
@@ -152,8 +148,16 @@ loader.load( './bash.glb', function ( gltf ) {
   scene.add(bash)
 });
 
+loader.load( './3dText/bashText.glb', function ( gltf ) {
+  const bash = gltf.scene
+  bash.position.set(-2.5, 30, 20);
+  bash.scale.set(3, 3, 3);
+  bash.rotation.set(2.84, 0, 0)
+  scene.add(bash)
+});
+
 //Three.js
-loader.load( './threejs.glb', function ( gltf ) {
+loader.load( './carousel1/threejs.glb', function ( gltf ) {
   const threejs = gltf.scene
   threejs.position.set(0, 1, 41);
   threejs.scale.set(6, 6, 6);
@@ -168,13 +172,68 @@ loader.load( './3dText/threeText.glb', function ( gltf ) {
   scene.add(threejs)
 });
 
+
+
+//Second carousel
+
+//Tools
+loader.load( './carousel2/tools.glb', function ( gltf ) {
+  const tool = gltf.scene
+  tool.rotation.set(0, 1.5, 0)
+  tool.scale.set(3, 3 ,3)
+  tool.position.set(60, 0, 0)
+  scene.add(tool)
+});
+
+//Adobe Photoshop
+loader.load( './carousel2/photoshop.glb', function ( gltf ) {
+  const photoshop = gltf.scene
+  photoshop.position.set(65, -2, 27);
+  photoshop.rotation.set(4.8, 0, 0);
+  photoshop.scale.set(1.5, 1.5, 1.5);
+  scene.add(photoshop)
+});
+//Adobe Illustrator
+loader.load( './carousel2/illustrator.glb', function ( gltf ) {
+  const illustrator = gltf.scene
+  illustrator.position.set(55, -2, 27);
+  illustrator.rotation.set(4.8, 0, 0);
+  illustrator.scale.set(1.5, 1.5, 1.5);
+  scene.add(illustrator)
+});
+//Visual Studio Code
+loader.load( './carousel2/vscode.glb', function ( gltf ) {
+  const vsCode = gltf.scene
+  vsCode.position.set(60, 0, 75);
+  vsCode.scale.set(8.25, 8.25, 8.25);
+  vsCode.rotation.set(0, 3.15, 3.13)
+  scene.add(vsCode)
+});
+//Kdenlive
+loader.load( './carousel2/kdenlive.glb', function ( gltf ) {
+  const live = gltf.scene
+  live.position.set(60, 35, 40)
+  live.rotation.set(2, 0, 0)
+  live.scale.set(6.5, 6.5, 6.5)
+  scene.add(live)
+});
+//Blender
+loader.load( './carousel2/blender.glb', function ( gltf ) {
+  const bash = gltf.scene
+  bash.position.set(60, 35, 13);
+  bash.scale.set(5.25, 5.25, 5.25);
+  bash.rotation.set(4, 0, 3.2)
+  scene.add(bash)
+});
+
+
 //scene switcher
 document.addEventListener("keydown", function onEvent(event) {
-  if (event.key === "ArrowRight" && camera.position.x <= 40) {
-    camera.position.x += 1;
+  if (event.key === "ArrowRight" && camera.position.x <= 58) {
+    camera.position.x += 3;
 }
-  if (event.key === "ArrowLeft" && camera.position.x >= -40) {
-    camera.position.x += -1;
+  if (event.key === "ArrowLeft" && camera.position.x >= -60) {
+    camera.position.x += -3;
 }
 });
 
