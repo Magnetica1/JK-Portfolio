@@ -4,17 +4,38 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Jack Kilow</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script type="text/javascript">
+      $(function () {
+          var documentEl = $(document),
+              fadeElem = $('.fade-scroll');
+          documentEl.on('scroll', function () {
+              var currScrollPos = documentEl.scrollTop();
+              fadeElem.each(function () {
+                  var $this = $(this),
+                      elemOffsetTop = $this.offset().top;
+                  if (currScrollPos > elemOffsetTop) $this.css('opacity', 1 - (currScrollPos - elemOffsetTop) / 200);
+              });
+          });
+      });        
+  </script>
 </head>
 <body>
-  
   <canvas id="bg"></canvas>
+
+  <header class="fade-scroll">
+    <div  id="header" class="triangle fade-scroll"></div>
+    <h1 data-value="Jack Kilow" class="title">Jack Kilow</h1>
+    <div class="triangle2 fade-scroll"></div>
+    <img src="../Img/PFP.png" alt="Profile Picture" class="pfp" id="pfp1">
+    <img src="../Img/PFP.png" alt="Profile Picture 2 " class="pfp" id="pfp2">
+</header>
 
   <script type="module" src="./main.js"></script>
 
 
   <main>
-    <h1 data-value="Jack Kilow" class="title">Jack Kilow</h1>
     <p>Hi, I am a 14-year-old Canadian high school student.
       I have been coding since I was twelve, starting out with C# with the Unity framework, then learning HTML paired with CSS, and now I am trying to master JS
       I am currently in a school programme focused on digital arts and design, which is helping me become a better frontend developer. </p>
