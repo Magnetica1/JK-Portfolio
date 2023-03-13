@@ -179,9 +179,16 @@ loader.load( './3dText/threeText.glb', function ( gltf ) {
 //Tools
 loader.load( './carousel2/tools.glb', function ( gltf ) {
   const tool = gltf.scene
-  tool.rotation.set(0, 1.5, 0)
-  tool.scale.set(3, 3 ,3)
-  tool.position.set(60, 0, 0)
+  tool.position.set(60, 10, 0)
+  tool.rotation.set(0, 0 , 0)
+  tool.scale.set(10, 10 ,10)
+  scene.add(tool)
+});
+loader.load( './3dText/toolsText.glb', function ( gltf ) {
+  const tool = gltf.scene
+  tool.position.set(54, 23, 0)
+  tool.rotation.set(1.7, 0, 0)
+  tool.scale.set(5, 5 ,5)
   scene.add(tool)
 });
 
@@ -201,12 +208,36 @@ loader.load( './carousel2/illustrator.glb', function ( gltf ) {
   illustrator.scale.set(1.5, 1.5, 1.5);
   scene.add(illustrator)
 });
+//Photoshop Text
+loader.load( './3dText/photoshopText.glb', function ( gltf ) {
+  const photoshop = gltf.scene
+  photoshop.position.set(59, -2, 22);
+  photoshop.rotation.set(0, 0, 0);
+  photoshop.scale.set(3, 3, 3);
+  scene.add(photoshop)
+});
+//Illustrator Text
+loader.load( './3dText/illustratorText.glb', function ( gltf ) {
+  const photoshop = gltf.scene
+  photoshop.position.set(48, -2, 22);
+  photoshop.rotation.set(0, 0, 0);
+  photoshop.scale.set(3, 3, 3);
+  scene.add(photoshop)
+});
 //Visual Studio Code
 loader.load( './carousel2/vscode.glb', function ( gltf ) {
   const vsCode = gltf.scene
   vsCode.position.set(60, 0, 75);
   vsCode.scale.set(8.25, 8.25, 8.25);
   vsCode.rotation.set(0, 3.15, 3.13)
+  scene.add(vsCode)
+});
+//VS Code Text
+loader.load( './3dText/VSCodeText.glb', function ( gltf ) {
+  const vsCode = gltf.scene
+  vsCode.position.set(42, -15, 60);
+  vsCode.scale.set(12, 12, 12);
+  vsCode.rotation.set(-1, 0, 0)
   scene.add(vsCode)
 });
 //Kdenlive
@@ -217,6 +248,13 @@ loader.load( './carousel2/kdenlive.glb', function ( gltf ) {
   live.scale.set(6.5, 6.5, 6.5)
   scene.add(live)
 });
+loader.load( './3dText/kDenliveText.glb', function ( gltf ) {
+  const live = gltf.scene
+  live.position.set(48, 26, 50)
+  live.rotation.set(1, 3.15, 3.15)
+  live.scale.set(8, 8, 8)
+  scene.add(live)
+});
 //Blender
 loader.load( './carousel2/blender.glb', function ( gltf ) {
   const bash = gltf.scene
@@ -224,7 +262,15 @@ loader.load( './carousel2/blender.glb', function ( gltf ) {
   bash.scale.set(5.25, 5.25, 5.25);
   bash.rotation.set(4, 0, 3.2)
   scene.add(bash)
-});
+}); 
+//BLender Text
+loader.load( './3dText/blenderText.glb', function ( gltf ) {
+  const bash = gltf.scene
+  bash.position.set(54, 30, 24);
+  bash.scale.set(5.25, 5.25, 5.25);
+  bash.rotation.set(0, 3.15, 3.15)
+  scene.add(bash)
+}); 
 
 
 //scene switcher
@@ -275,7 +321,7 @@ function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
 
     // camera.position.z = t * -0.03;
-    camera.rotation.x = t * 0.0044;
+    camera.rotation.x = t * 0.002;
   console.log(t)
 }
 
@@ -287,7 +333,7 @@ moveCamera();
 
 //Is like a gameloop and updates the website
 function animate() {
-  rotateAround.rotateY(0.02);
+  rotateAround.rotateY(0.008);
   requestAnimationFrame(animate); 
   //render the canvas(renderer)
   renderer.render(scene, camera)
