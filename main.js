@@ -321,7 +321,7 @@ function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
 
     // camera.position.z = t * -0.03;
-    camera.rotation.x = t * 0.0044;
+    camera.rotation.x = t * 0.002;
   console.log(t)
 }
 
@@ -333,7 +333,7 @@ moveCamera();
 
 //Is like a gameloop and updates the website
 function animate() {
-  rotateAround.rotateY(0.02);
+  rotateAround.rotateY(0.008);
   requestAnimationFrame(animate); 
   //render the canvas(renderer)
   renderer.render(scene, camera)

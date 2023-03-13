@@ -8,25 +8,28 @@
   --color-footer: #5c0b0b;
   --color-blured: rgba(0, 0, 49, 0.5);
   --color-underline: #005e8d;
+  --color-skillBG: #01012cb2;
+  --color-paraMuted: #858282;
 }
-
-
-
 body{
   margin: 0;
   background-image: url(../Img/Background-Waves2.svg);
   background-repeat: norepeat;
   background-size: cover;
   overflow-x: hidden;
-  
+  background-color: #0b0013;
 }
 @font-face {
   font-family: Nunito;
-  src: url(../Fonts/Nunito/Nunito-VariableFont_wght.ttf);
+  src: url(Fonts/Nunito/Variants/Nunito-Black.ttf);
 }
 @font-face {
-  font-family: Alata;
-  src: url(../Fonts/Alata-Regular.ttf);
+  font-family: Sofia;
+  src: url(Fonts/Sofia_Sans_Semi_Condensed/SofiaSansSemiCondensed-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: Gothic;
+  src: url(Fonts/NanumGothicCoding-Bold/NanumGothicCoding-Bold.ttf);
 }
 html {
   scroll-behavior: smooth;
@@ -105,7 +108,6 @@ html {
 
 
 /* ----------------ABOUT ME---------------- */
-
 #abtmeTitle{
   top: 30vh;
 }
@@ -113,8 +115,9 @@ html {
   position: absolute;
   margin: 0;
   color: var(--color-para);
-  font-family: Alata;
-  font-size: 3vh;
+  font-family: Gothic;
+  font-size: 2.4vh;
+  font-weight: 600;
 }
 
 #abtme {
@@ -123,7 +126,8 @@ html {
 
 .highlight {
   color: var(--color-highlight);
-  font-weight: bolder;
+  font-weight: 900;
+  font-family: Nunito;
 }
 
 /* ----------------FOOTER---------------- */
@@ -142,7 +146,7 @@ footer{
 #footTitle{
   color: var(--color-footer);
   font-size: 3vw;
-  font-family: Alata;
+  font-family: Gothic;
   text-align: center;
   margin: 0;
 }
@@ -152,7 +156,7 @@ footer{
   text-align: center;
   font-size: 3vh;
   width: 100vw;
-  font-family: Alata;
+  font-family: Nunito;
   text-decoration: underline;
   text-align: center;
   font-weight: bolder;
@@ -160,7 +164,7 @@ footer{
 .contactContent h3{
   display: flex;
   margin: 0;
-  font-family: Alata;
+  font-family: Sofia;
   width: fit-content;
 }
 .contactContent{
@@ -368,17 +372,61 @@ ol li{
 }
 
 canvas {
+  width: 100vw;
+  height: 100vh;
+  display: block;
   position: fixed;
   top: 0;
   left: 0;
+  z-index: -9999;
 }
 main {
   position: absolute;
-  color: white;
-  height: 2100px;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1000;
 }
 .scroller {
+  width: 100vw;
+  height: 10000vh;
+  font-size: 1000vh;
+  color: #fff;
+  /* display: none; */
+  z-index: -1;
   position: fixed;
-  height: 1000vh;
   top: 0px;
+  left: 0px;
+}
+
+/* cards */
+.skills{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 100vw;
+}
+.skillCard {
+  display: inline-flex;
+  position: relative;
+  top: 87vh;
+  width: 20vw;
+  height: 13vh;
+  border-radius: 30px;
+  margin-bottom: 4rem;
+  margin-left: 2.1rem;
+  margin-right: 2.1rem;
+  background-color: var(--color-skillBG);
+  color: var(--color-para);
+  font-family: Nunito;
+  justify-content: center;
+  font-size: 2.5vh;
+  box-shadow: 11px 11px 25px -5px rgba(0,0,0,0.53);
+}
+.skillCard:hover{
+  transition: all ease-in 300ms;
+  box-shadow: none;
+}
+
+.skillCard .skillText {
+  position: absolute;
+  top: 3vh;
 }

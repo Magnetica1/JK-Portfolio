@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -22,7 +22,7 @@
   </script>
 </head>
 <body>
-  <canvas id="bg"></canvas>
+
 
   <header class="fade-scroll">
     <div  id="header" class="triangle fade-scroll"></div>
@@ -30,16 +30,118 @@
     <div class="triangle2 fade-scroll"></div>
     <img src="../Img/PFP.png" alt="Profile Picture" class="pfp" id="pfp1">
     <img src="../Img/PFP.png" alt="Profile Picture 2 " class="pfp" id="pfp2">
+</header> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Jack Kilow</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="shortcut icon" href="../Img/PFP.png" type="image/x-icon">
+    <script src="../JS/index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var documentEl = $(document),
+                fadeElem = $('.fade-scroll');
+            documentEl.on('scroll', function () {
+                var currScrollPos = documentEl.scrollTop();
+                fadeElem.each(function () {
+                    var $this = $(this),
+                        elemOffsetTop = $this.offset().top;
+                    if (currScrollPos > elemOffsetTop) $this.css('opacity', 1 - (currScrollPos - elemOffsetTop) / 200);
+                });
+            });
+        });        
+        </script>
+</head>
+
+<main>
+<header class="fade-scroll">
+    <div  id="header" class="triangle fade-scroll"></div>
+    <h1  class="title fade-scroll" data-value="Jack Kilow">Jack Kilow</h1>
+    <div class="triangle2 fade-scroll"></div>
+    <img src="PFP.png" alt="Profile Picture" class="pfp" id="pfp1">
+    <img src="PFP.png" alt="Profile Picture 2 " class="pfp" id="pfp2">
 </header>
 
-  <script type="module" src="./main.js"></script>
+
+<nav>
+<div class="topTriangle"></div>
+<div class="topTriangle2"></div>
+<div class="rectMenu">
+    <div class="blur"></div>
+</div>
+
+<ol>
+    <a href="#abtmeTitle" class="menuItem hover-underline-animation" id="abtme-item">About me</a>
+    <a href="#skillsTitle" class="menuItem hover-underline-animation" id="skills-item">Skills</a>
+    <a href="#abtme" class="menuItem hover-underline-animation" id="projects-item">Projects</a>
+    <a href="#abtme" class="menuItem hover-underline-animation" id="work-item">Experience</a>
+    <a href="#abtme" class="menuItem hover-underline-animation" id="educ-item">Education</a>
+</ol>
+</nav>
 
 
-  <main>
-    <p>Hi, I am a 14-year-old Canadian high school student.
-      I have been coding since I was twelve, starting out with C# with the Unity framework, then learning HTML paired with CSS, and now I am trying to master JS
-      I am currently in a school programme focused on digital arts and design, which is helping me become a better frontend developer. </p>
-    </main>
+<body>
+<!-- <canvas id="bg"></canvas> -->
+<h2 class="subtitle" id="abtmeTitle">About me</h2>
+<p id="abtme" class="para">Hi, I am a 14-year-old <code class="highlight">Canadian</code> high school student. <br>
+    I have been coding since I was twelve, starting out with <code class="highlight">C#</code> with the Unity framework, then learning <code class="highlight">HTML</code> paired with <code class="highlight">CSS</code>, and now I am trying to master <code class="highlight">JS</code> <br>
+    I am currently in a school programme focused on digital arts and design, which is helping me become a better <code class="highlight">frontend developer</code>. </p>
 
+        <h2 class="subtitle" id="skillsTitle">Skills</h2>
+        <div class="skills">
+            <div class="skillCard" id="skill1"><p class="skillText">Github</p></div>
+            <div class="skillCard" id="skill2"><p class="skillText">HTML/CSS/JS</p></div>
+            <div class="skillCard" id="skill3"><p class="skillText">Blender</p></div>
+            <div class="skillCard" id="skill4"><p class="skillText">C#</p></div>
+            <div class="skillCard" id="skill5"><p class="skillText">Photoshop</p></div>
+            <div class="skillCard" id="skill6"><p class="skillText">Kdenlive</p></div>
+            <div class="skillCard" id="skill7"><p class="skillText">VScode</p></div>
+            <div class="skillCard" id="skill8"><p class="skillText">Unity</p></div>
+            <div class="skillCard" id="skill9"><p class="skillText">Bash</p></div>
+            <div class="skillCard" id="skill10"><p class="skillText">Linux</p></div>
+            <div class="skillCard" id="skill11"><p class="skillText">Three.js</p></div>
+            <div class="skillCard" id="skill12"><p class="skillText">Illustrator</p></div>
+        </div>
+
+<div class="projects">
+    <h2 class="subtitle" id="projectsTitle">Projects</h2>
+</div>
 </body>
-</html>
+
+
+<footer>
+<a href="#top" id="topBtn">Back to Top</a>
+
+<h1 class="Title" id="footTitle">Contact Information</h1>
+
+<div class="contactContent">
+    <div class="phoneNumber">
+        <h3 class="contacText" >Phone number:</h3>
+        <h3 class="contentFooter" id="pn">514-980-0722</h3>
+    </div>
+
+    <div class="email">
+        <h3 class="contacText" id="email">Email:</h3>
+        <h3 class="contentFooter">jackkw818@gmail.com</h3>
+    </div>
+
+    <div class="location">
+        <h3 class="contacText" id="location">Location:</h3>
+        <h3 class="contentFooter">Montreal, Canada</h3>
+    </div>
+</div>
+
+<script type="module" src="./main.js"></script>
+<p class="scroller">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus quam quod totam ratione tempora esse, deserunt nemo ipsa quidem adipisci labore sed culpa maxime soluta odit illo, blanditiis maiores suscipit.</p>
+    </footer>
+<div class="scroller"></div>
+</main>
+    </html>
