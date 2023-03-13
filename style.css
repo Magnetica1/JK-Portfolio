@@ -402,18 +402,20 @@ main {
 .skills{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  width: 100vw;
+  
 }
 .skillCard {
+  transition: all ease-in 300ms;
   display: inline-flex;
   position: relative;
   top: 87vh;
   width: 20vw;
   height: 13vh;
-  border-radius: 30px;
-  margin-bottom: 4rem;
-  margin-left: 2.1rem;
-  margin-right: 2.1rem;
+  border-radius: 20px;
+  margin-top:1.5rem;
+  margin-bottom:1.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
   background-color: var(--color-skillBG);
   color: var(--color-para);
   font-family: Nunito;
@@ -421,12 +423,27 @@ main {
   font-size: 2.5vh;
   box-shadow: 11px 11px 25px -5px rgba(0,0,0,0.53);
 }
+.skillText {
+  transition: all ease-in 300ms;
+  text-align: center;
+}
 .skillCard:hover{
   transition: all ease-in 300ms;
   box-shadow: none;
 }
 
 .skillCard .skillText {
+  transition: all ease-in 300ms;
   position: absolute;
-  top: 3vh;
+  top: 5vh;
+}
+
+.skillCard:hover {
+  transition: all ease-in 300ms;
+  width: 24vw;
+  height: 14vh;
+}
+.skillCard:hover .skillText{
+  top: 5vh;
+  font-size: 1.5rem;
 }
