@@ -257,29 +257,30 @@ ol li{
   width: 17.5vw;
 }
 
-#work-item{
-  top: 1vh;
-  left: 26vw;
-  width: 17.5vw;
-}
-
-#educ-item{
-  top: 1vh;
-  left: 46vw;
-  width: 17.5vw;
-}
-
 #skills-item{
   top: 1vh;
-  left: 66vw;
+  left: 28vw;
   width: 17.5vw;
 }
 
 #projects-item{
   top: 1vh;
-  left: 81vw;
+  left: 44vw;
   width: 17.5vw;
 } 
+
+#work-item{
+  top: 1vh;
+  left: 60vw;
+  width: 17.5vw;
+}
+
+#educ-item{
+  top: 1vh;
+  left: 78vw;
+  width: 17.5vw;
+}
+
 
 .hover-underline-animation:after {
   content: '';
@@ -442,8 +443,10 @@ main {
   transition: all ease-in 300ms;
   width: 24vw;
   height: 14vh;
+  resize: both;
 }
 .skillCard:hover .skillText{
   top: 5vh;
   font-size: 1.5rem;
 }
+

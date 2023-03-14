@@ -1,0 +1,17 @@
+1. Github ✔✔✔✔ 👍
+2. HTML/CSS/JS ✔✔✔✔ 👍
+3. Blender ✔✔✔
+4. C# ✔✔✔✔ 👍
+5. Photoshop ✔✔✔
+6. Kdenlive ✔✔✔
+7. VScode ✔✔✔ 
+8. Unity ✔✔✔✔ 👍
+8. Bash ✔✔✔✔ 👍
+9. Linux 
+10.Three.js ✔✔✔✔ 👍
+11. Illustrator ✔✔✔
+
+✔ = Finished model
+✔✔ = Finished model and loaded
+✔✔✔ = Finished model and loaded and placed
+✔✔✔✔ = Finished model and loaded and placed and text
