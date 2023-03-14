@@ -1,8 +1,8 @@
-1. Infinite Grid
-2. Stock trading
+1. Infinite Grid ✔
+2. Stock trading 
 3. Three.js 
 4. Character controller
-5. A few games
+5. A few games https://magnetica.itch.io/
 6. Hackathon - Virtual classroom
-7. AT Projects(Portfolio)
+7. AT Projects(Portfolio) https://jackkilow.wixsite.com/porfoliodejackk
 8. 3D Scenes

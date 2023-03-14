@@ -233,54 +233,24 @@ footer{
   height: 10vh;
   left: 6vw;
 }
+.herro {
+  display: flex;
+  justify-content: space-between;
+  width: 87.5vw;
+  position: fixed;
+  z-index: 1000;  left: 5.5vw;
+}
+
 .menuItem{
   text-decoration: none;
   z-index: 100;
-  position: fixed;
   font-weight: bold;
-  z-index: 100;
   font-family: Nunito;
   font-size: 5vh;
-  list-style-type: none;
   color: #5c0b0b;
-  display: inline;
-}
-ol li{
-  z-index: 100;
   left: 6vw;
-  right: 6vw;
-}
-
-#abtme-item{
   top: 1vh;
-  left: 8.5vw; 
-  width: 17.5vw;
 }
-
-#skills-item{
-  top: 1vh;
-  left: 28vw;
-  width: 17.5vw;
-}
-
-#projects-item{
-  top: 1vh;
-  left: 44vw;
-  width: 17.5vw;
-} 
-
-#work-item{
-  top: 1vh;
-  left: 60vw;
-  width: 17.5vw;
-}
-
-#educ-item{
-  top: 1vh;
-  left: 78vw;
-  width: 17.5vw;
-}
-
 
 .hover-underline-animation:after {
   content: '';
@@ -289,12 +259,13 @@ ol li{
   transform: scaleX(0);
   height: 2px;
   bottom: 0;
+  /* Might need to be changed for eahc individual one */
   left: 0;
   background-color: var(--color-underline);
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
-
+/* This part has been checked()underneath not the preoblem */
 .hover-underline-animation:hover:after {
   transform: scaleX(1);
   transform-origin: bottom left;
