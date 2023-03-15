@@ -469,3 +469,48 @@ main {
 .custom-shape-divider-bottom-1678840195 .shape-fill {
   fill: #A10000;
 }
+
+#experienceTitle {
+top: 300vh;
+}
+.experience {
+  width: 100vw;
+  height: 55vh;
+  background: #001621;
+}
+
+.experienceContent {
+  position: relative;
+  top: 12vh;
+  display: flex;
+  height: 10vh;
+  border-radius: 30px;
+  width: 80vw;
+  left: 10vw;
+  right: 10vw;
+  background: #333333;
+}
+
+.spacer2 {
+  height: 30%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;  
+  background-size: cover; 
+}
+
+.layer2 {
+  background-image: url("./wave2.svg");
+}
+
+.spacer3 {
+  height: 30%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;  
+  background-size: cover; 
+}
+
+.layer3 {
+  background-image: url("./waves3.svg");
+}
