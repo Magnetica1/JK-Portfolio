@@ -133,7 +133,7 @@ html {
 }
 
 .abtMe {
-  background-color: #001621;
+  background-color: var(--color-project);
   height: 70vh;
 }
 .skillContainer {
@@ -315,6 +315,9 @@ footer{
 #skillsTitle{
   z-index: 4;
   top: 100vh;
+  padding: 0.4vw;
+  margin: auto;
+  transition: transform 800ms ease;
 }
 
 
@@ -410,8 +413,8 @@ main {
 .skills{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  
 }
+
 .skillCard {
   transition: all ease-in 300ms;
   display: inline-flex;
@@ -438,6 +441,27 @@ main {
 .skillCard:hover{
   transition: all ease-in 300ms;
   box-shadow: none;
+  transform: scale(1.3);
+}
+
+.skillCard:hover > img {
+  opacity: 1;
+  transform: scale(1.01);
+}
+
+.skillImage1 {
+  scale: 1.7;
+}
+
+.skillCard > img {
+  opacity: 0;
+  transition: opacity 800ms ease,
+    transform 800ms ease;
+}
+
+.skillHover:hover > img {
+  opacity: 1;
+  transform: scale(1.01);
 }
 
 .skillCard .skillText {
@@ -446,12 +470,6 @@ main {
   top: 5vh;
 }
 
-.skillCard:hover {
-  transition: all ease-in 300ms;
-  width: 24vw;
-  height: 14vh;
-  resize: both;
-}
 .skillCard:hover .skillText{
   top: 5vh;
   font-size: 1.5rem;
@@ -542,9 +560,9 @@ top: 340vh;
   width: 20vw;
   height: 40vh;
   border-radius: 20px;
-  margin: 2vw;
+  margin: 4vw;
   transition: all ease 500ms;
-
+  left: 7vw;
 }
 
 .project:hover {
@@ -608,4 +626,24 @@ top: 340vh;
   background-color: black;
   height: 60vh;
   width: 100vw;
+}
+
+.video {
+  width: 20vw;
+  height: 20vh;
+}
+
+.projectSub {
+  font-family: Nunito;
+  text-align: center;
+}
+
+.projectPara {
+  position: relative;
+  font-family: Gothic;
+  font-size: 1.9vh;
+  text-align: center;
+  font-weight: 800;
+  margin-bottom: 2vw;
+  top: -1vh;
 }
