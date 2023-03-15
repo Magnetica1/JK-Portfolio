@@ -1,15 +1,17 @@
 :root {
-  --color-subtitle: #5a0c0c;
-  --color-title: #a10000;
-  --color-menuBG: #000020b2;
-  --color-para: #fff;
-  --color-highlight: #af0606;
+  --color-subtitle: #593ac0;
+  --color-title: #361F81;
+  --color-menuBG: #1F2A37;
+  --color-para: #F3F0EE;
+  --color-highlight: #619DCA;
   --color-text-muted: #333333;
   --color-footer: #5c0b0b;
   --color-blured: rgba(0, 0, 49, 0.5);
   --color-underline: #005e8d;
-  --color-skillBG: #01012cb2;
+  --color-cardBG: #361F81;
   --color-paraMuted: #858282;
+  --color-menu-subtitle: #526FC2;
+  --color-project: #0b1235;
 }
 body{
   margin: 0;
@@ -54,20 +56,24 @@ html {
   
 }
 
-#pfp1{
+.pfp {
   position: fixed;
   top: 13vh;
   height: 12vh;
   border-radius: 50%;
+}
+#pfp1{
   left: 16vw;
 }
 #pfp2{
-  position: fixed;
-  top: 13vh;
-  height: 12vh;
-  border-radius: 50%;
   right: 15.1vw;
 }
+.pfp:hover {
+  width: 7%;
+  height: 15%;
+  transition: all ease 250ms;
+}
+
 .triangle{
   top: 13vh;
   position: fixed;
@@ -136,8 +142,8 @@ html {
 }
 
 .projectsContainer {
-  height: 100vh;
-  background-color: #a10000;
+  height: 140vh;
+  background-color: var(--color-project);
 }
 
 .spacer {
@@ -163,7 +169,7 @@ html {
 footer{
   font-size: 5.5vh;
   position: absolute;
-  top: 400vh;
+  top: 470vh;
   margin: 0;
   background-color: #000016;
   border-radius: 1.5vh;
@@ -234,7 +240,7 @@ footer{
   border-top: 10vh solid transparent;
   border-bottom: 10vh solid transparent;
   border-left: 6vw solid var(--color-blured) ;
-  right: 0vw;
+  right: 0.6vw;
   padding: 0px;
 }
 .topTriangle2{
@@ -247,7 +253,7 @@ footer{
   border-top: 10vh solid transparent;
   border-bottom: 10vh solid transparent;
   border-right: 6vw solid var(--color-blured) ;
-  left: 0vw;
+  left: 0.1vw;
   padding: 0;
   clip-path: revert;
 }
@@ -276,7 +282,7 @@ footer{
   font-weight: bold;
   font-family: Nunito;
   font-size: 5vh;
-  color: #5c0b0b;
+  color: var(--color-menu-subtitle);
   left: 6vw;
   top: 1vh;
 }
@@ -418,7 +424,7 @@ main {
   margin-bottom:1.5rem;
   margin-left: 1rem;
   margin-right: 1rem;
-  background-color: var(--color-skillBG);
+  background-color: var(--color-cardBG);
   color: var(--color-para);
   font-family: Nunito;
   justify-content: center;
@@ -467,15 +473,15 @@ main {
 }
 
 .custom-shape-divider-bottom-1678840195 .shape-fill {
-  fill: #A10000;
+  fill: var(--color-project);
 }
 
 #experienceTitle {
-top: 300vh;
+top: 340vh;
 }
 .experience {
   width: 100vw;
-  height: 55vh;
+  height: 80vh;
   background: #001621;
 }
 
@@ -513,4 +519,93 @@ top: 300vh;
 
 .layer3 {
   background-image: url("./waves3.svg");
+}
+
+.work1 {
+  position: relative;
+  display: flex;
+  color: white;
+  font-size: 1.5rem;
+  font-family: Gothic;
+  margin-left: 4vw;
+  margin-top: auto;
+  margin-bottom: auto;
+  z-index: 2;
+}
+
+
+/* PROJECTS */
+.project {
+  position: relative;
+  top: 30vh;
+  background-color: var(--color-cardBG);
+  width: 20vw;
+  height: 40vh;
+  border-radius: 20px;
+  margin: 2vw;
+  transition: all ease 500ms;
+
+}
+
+.project:hover {
+  box-shadow: 0px -6px 23px -2px #09ff0071;
+  translate: 0px -3vh;
+  transition: all ease 700ms;
+}
+
+.projectDiv {
+  display: flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+}
+
+.downArrow {
+  position: relative;
+  top: 2vh;
+  width: 3vw;
+  left: 2vw;  
+  z-index: 2;
+}
+.initialContent {
+  display: flex;
+  justify-content: space-around;
+  margin-right: 2vw;
+  margin-left: 2vw;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.initial {
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: style bullet;;
+  font-family: Gothic;
+  color: rgb(194, 194, 194);
+  align-items: flex-end;
+  z-index: 2;
+  transition: all ease 300ms; 
+}
+
+.final {
+  font-family: Gothic;
+  position: absolute;
+  display: none;
+  padding-top: 7vh;
+  padding-bottom: 2vh;
+  background-color: #333333;
+  z-index: 0;
+  border-radius: 20px;
+  color: rgb(136, 136, 136);
+  transition: all ease 300ms;
+}
+
+#educationTitle {
+
+}
+
+.education {
+  position: absolute;
+  background-color: black;
+  height: 60vh;
+  width: 100vw;
 }
