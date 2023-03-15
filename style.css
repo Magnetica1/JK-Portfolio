@@ -93,23 +93,23 @@ html {
 .subtitle{
   color: var(--color-subtitle);
   font-family: nunito;
-  font-size: 5vh;
+  font-size: 7vh;
   position: absolute;
   margin: 0;
   background-color: var(--color-menuBG);
   border-radius: 1.5vh;
   padding: 0;
-  width: 15vw;
+  width: 25vw;
   text-align: center;
-  left: 42.5vw;
-  right: 42.5vw;
+  left: 37.5vw;
+  right: 37.5vw;
   margin: auto;
 }
 
 
 /* ----------------ABOUT ME---------------- */
 #abtmeTitle{
-  top: 30vh;
+  top: 38vh;
 }
 .para{
   position: absolute;
@@ -121,7 +121,35 @@ html {
 }
 
 #abtme {
-  top: 43vh;
+  z-index: 3;
+  margin: 2vw;
+  top: 48vh;
+}
+
+.abtMe {
+  background-color: #001621;
+  height: 70vh;
+}
+.skillContainer {
+  background-color: black;
+  height: 80vh;
+}
+
+.projectsContainer {
+  height: 100vh;
+  background-color: #a10000;
+}
+
+.spacer {
+  height: 30%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;  
+  background-size: cover;
+}
+
+.layer1 {
+  background-image: url("./wave1.svg");
 }
 
 .highlight {
@@ -238,7 +266,8 @@ footer{
   justify-content: space-between;
   width: 87.5vw;
   position: fixed;
-  z-index: 1000;  left: 5.5vw;
+  z-index: 1000;  
+  left: 5.5vw;
 }
 
 .menuItem{
@@ -278,7 +307,8 @@ footer{
 }
 
 #skillsTitle{
-  top: 75vh;
+  z-index: 4;
+  top: 100vh;
 }
 
 
@@ -291,7 +321,7 @@ footer{
 
 /* ----------------PROJECTS---------------- */
 #projectsTitle {
-  top: 150vh;
+  top: 200vh;
 }
 
 .container {
@@ -380,7 +410,7 @@ main {
   transition: all ease-in 300ms;
   display: inline-flex;
   position: relative;
-  top: 87vh;
+  top: 20vh;
   width: 20vw;
   height: 13vh;
   border-radius: 20px;
@@ -421,3 +451,21 @@ main {
   font-size: 1.5rem;
 }
 
+.custom-shape-divider-bottom-1678840195 {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1678840195 svg {
+  position: relative;
+  display: block;
+  width: calc(114% + 1.3px);
+  height: 8vh;
+  background-color: black;
+}
+
+.custom-shape-divider-bottom-1678840195 .shape-fill {
+  fill: #A10000;
+}
