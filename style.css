@@ -500,7 +500,7 @@ top: 340vh;
 .experience {
   width: 100vw;
   height: 80vh;
-  background: #001621;
+  background: black;
 }
 
 .experienceContent {
@@ -539,6 +539,10 @@ top: 340vh;
   background-image: url("./waves3.svg");
 }
 
+.flip {
+transform: rotate(180deg);
+}
+
 .work1 {
   position: relative;
   display: flex;
@@ -566,7 +570,7 @@ top: 340vh;
 }
 
 .project:hover {
-  box-shadow: 0px -6px 23px -2px #09ff0071;
+  box-shadow: 0px -6px 23px -2px var(--color-highlight);
   translate: 0px -3vh;
   transition: all ease 700ms;
 }
@@ -619,7 +623,7 @@ top: 340vh;
 
 .education {
   position: absolute;
-  background-color: black;
+  background-color: var(--color-project);
   height: 60vh;
   width: 100vw;
 }
@@ -642,4 +646,8 @@ top: 340vh;
   font-weight: 800;
   margin-bottom: 2vw;
   top: -1vh;
+}
+
+#educationTitle {
+  top: 6vh;
 }
