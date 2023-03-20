@@ -5,7 +5,7 @@
   --color-para: #F3F0EE;
   --color-highlight: #619DCA;
   --color-text-muted: #333333;
-  --color-footer: #5c0b0b;
+  --color-footer: #526FC2;
   --color-blured: rgba(0, 0, 49, 0.5);
   --color-underline: #005e8d;
   --color-cardBG: #361F81;
@@ -101,7 +101,6 @@ html {
   font-family: nunito;
   font-size: 7vh;
   position: absolute;
-  margin: 0;
   background-color: var(--color-menuBG);
   border-radius: 1.5vh;
   padding: 0;
@@ -169,9 +168,9 @@ html {
 footer{
   font-size: 5.5vh;
   position: absolute;
-  top: 470vh;
+  top: 320vh;
   margin: 0;
-  background-color: #000016;
+  background-color: var(--color-project);
   border-radius: 1.5vh;
   width: 100vw;
   height: 30vh;
@@ -186,7 +185,7 @@ footer{
 }
 #topBtn{
   display: block;
-  color: #333333;
+  color: var(--color-para);
   text-align: center;
   font-size: 3vh;
   width: 100vw;
@@ -207,11 +206,11 @@ footer{
 }
 .contacText {
   font-size: 2.5vh;
-  color: var(--color-footer);
+  color: var(--color-para);
 }
 .contentFooter{
   font-size: 2.5vh;
-  color: var(--color-text-muted);
+  color: var(--color-menu-subtitle);
 }
 .phoneNumber{
   padding-right: 22.5vw;
@@ -495,24 +494,25 @@ main {
 }
 
 #experienceTitle {
-top: 340vh;
+  top: 195vh;
+  text-align: center;
 }
 .experience {
   width: 100vw;
-  height: 80vh;
-  background: black;
+  height: 40vh;
+  background: var(--color-project);
 }
 
 .experienceContent {
   position: relative;
-  top: 12vh;
+  top: 25vh;
   display: flex;
   height: 10vh;
   border-radius: 30px;
   width: 80vw;
   left: 10vw;
   right: 10vw;
-  background: #333333;
+  background: var(--color-cardBG);
 }
 
 .spacer2 {
@@ -537,10 +537,6 @@ top: 340vh;
 
 .layer3 {
   background-image: url("./waves3.svg");
-}
-
-.flip {
-transform: rotate(180deg);
 }
 
 .work1 {
@@ -588,6 +584,7 @@ transform: rotate(180deg);
   left: 2vw;  
   z-index: 2;
 }
+
 .initialContent {
   display: flex;
   justify-content: space-around;
@@ -602,7 +599,7 @@ transform: rotate(180deg);
   justify-content: space-evenly;
   list-style-type: style bullet;;
   font-family: Gothic;
-  color: rgb(194, 194, 194);
+  color: var(--color-para);
   align-items: flex-end;
   z-index: 2;
   transition: all ease 300ms; 
@@ -614,16 +611,16 @@ transform: rotate(180deg);
   display: none;
   padding-top: 7vh;
   padding-bottom: 2vh;
-  background-color: #333333;
+  background-color: var(--color-cardBG);
   z-index: 0;
   border-radius: 20px;
-  color: rgb(136, 136, 136);
+  color: var(--color-para);
   transition: all ease 300ms;
 }
 
 .education {
   position: absolute;
-  background-color: var(--color-project);
+  background-color: black;
   height: 60vh;
   width: 100vw;
 }
@@ -649,5 +646,15 @@ transform: rotate(180deg);
 }
 
 #educationTitle {
-  top: 6vh;
+  top: -6vh;
+}
+
+.educationContainer {
+  position: relative;
+  width: 60vw;
+  height: 40vh;
+  border-radius: 2rem;
+  background-color: var(--color-cardBG);
+  margin: auto;
+  top: 15vh;
 }
