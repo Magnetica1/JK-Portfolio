@@ -141,8 +141,10 @@ html {
 }
 
 .projectsContainer {
-  height: 140vh;
-  background-color: var(--color-project);
+  z-index: 1;
+  position: relative;
+  top: -10vh;
+  /* height: 210vh; */
 }
 
 .spacer {
@@ -166,14 +168,15 @@ html {
 /* ----------------FOOTER---------------- */
 
 footer{
+  z-index: 1;
   font-size: 5.5vh;
   position: absolute;
-  top: 320vh;
+  top: 483vh;
   margin: 0;
   background-color: var(--color-project);
   border-radius: 1.5vh;
   width: 100vw;
-  height: 30vh;
+  height: 40vh;
 }
 
 #footTitle{
@@ -329,7 +332,8 @@ footer{
 
 /* ----------------PROJECTS---------------- */
 #projectsTitle {
-  top: 200vh;
+  top: 335vh;
+  z-index: 10;
 }
 
 .container {
@@ -496,11 +500,13 @@ main {
 #experienceTitle {
   top: 195vh;
   text-align: center;
+  z-index: 2;
 }
 .experience {
   width: 100vw;
   height: 40vh;
   background: var(--color-project);
+  z-index: 2;
 }
 
 .experienceContent {
@@ -513,6 +519,7 @@ main {
   left: 10vw;
   right: 10vw;
   background: var(--color-cardBG);
+  z-index: 2;
 }
 
 .spacer2 {
@@ -539,6 +546,19 @@ main {
   background-image: url("./waves3.svg");
 }
 
+.spacer4 {
+  z-index: 120;
+  height: 30%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;  
+  background-size: cover; 
+}
+
+.layer4 {
+  background-image: url(./wave1.svg);
+}
+
 .work1 {
   position: relative;
   display: flex;
@@ -555,7 +575,7 @@ main {
 /* PROJECTS */
 .project {
   position: relative;
-  top: 30vh;
+  top: 90vh;
   background-color: var(--color-cardBG);
   width: 20vw;
   height: 40vh;
@@ -565,6 +585,10 @@ main {
   left: 7vw;
 }
 
+.projects {
+  background-color: var(--color-project);
+}
+
 .project:hover {
   box-shadow: 0px -6px 23px -2px var(--color-highlight);
   translate: 0px -3vh;
@@ -572,6 +596,8 @@ main {
 }
 
 .projectDiv {
+  height: auto;
+  position: relative;
   display: flex;
   flex-direction:row;
   flex-wrap: wrap;
@@ -657,4 +683,27 @@ main {
   background-color: var(--color-cardBG);
   margin: auto;
   top: 15vh;
+}
+
+.blob-motion {
+  position: absolute;
+  transform: translateY(-20%);
+}
+.blobber1 {
+  position: relative;
+  z-index: 1;
+  top: -80vh;
+  transform: rotate(180deg);
+}
+
+.blobber2 {
+  position: relative;
+  z-index: 1;
+  top: -180vh;
+  left: -34vw;
+  transform: rotate(180deg);
+}
+
+.educationImg {
+  margin: 2rem;
 }
