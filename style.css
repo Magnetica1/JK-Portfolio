@@ -143,8 +143,7 @@ html {
 .projectsContainer {
   z-index: 1;
   position: relative;
-  top: -10vh;
-  /* height: 210vh; */
+  height: 165vh;
 }
 
 .spacer {
@@ -171,7 +170,7 @@ footer{
   z-index: 1;
   font-size: 5.5vh;
   position: absolute;
-  top: 483vh;
+  top: 500vh;
   margin: 0;
   background-color: var(--color-project);
   border-radius: 1.5vh;
@@ -332,7 +331,7 @@ footer{
 
 /* ----------------PROJECTS---------------- */
 #projectsTitle {
-  top: 335vh;
+  top: 10vh;
   z-index: 10;
 }
 
@@ -504,12 +503,14 @@ main {
 }
 .experience {
   width: 100vw;
-  height: 40vh;
+  height: 60vh;
   background: var(--color-project);
   z-index: 2;
+  transition: all ease 300ms;
 }
 
 .experienceContent {
+  transition: all ease 300ms ;
   position: relative;
   top: 25vh;
   display: flex;
@@ -520,6 +521,31 @@ main {
   right: 10vw;
   background: var(--color-cardBG);
   z-index: 2;
+}
+
+.final {
+  font-family: Gothic;
+  position: absolute;
+  display: none;
+  padding-top: 7vh;
+  padding-bottom: 2vh;
+  background-color: var(--color-cardBG);
+  z-index: 0;
+  border-radius: 20px;
+  color: var(--color-para);
+  transition: all ease 300ms ;
+  -webkit-box-shadow: -9px 8px 20px 3px rgba(0,0,0,0.57); 
+  box-shadow: -9px 8px 20px 3px rgba(0,0,0,0.57);
+}
+
+.initial:hover + .final {
+  transition: all 330ms ease-in-out;
+  display: block;
+}
+
+.final:hover{
+  transition: all ease 300ms ;
+  display: block;
 }
 
 .spacer2 {
@@ -560,6 +586,7 @@ main {
 }
 
 .work1 {
+  transition: all ease 300ms;
   position: relative;
   display: flex;
   color: white;
@@ -574,18 +601,20 @@ main {
 
 /* PROJECTS */
 .project {
+  top: 25vh;
   position: relative;
-  top: 90vh;
   background-color: var(--color-cardBG);
   width: 20vw;
-  height: 40vh;
+  height: 45vh;
   border-radius: 20px;
-  margin: 4vw;
+  margin: 6vw;
   transition: all ease 500ms;
-  left: 7vw;
+  left: 3vw;
+  align-items: center;
 }
 
 .projects {
+  position: absolute;
   background-color: var(--color-project);
 }
 
@@ -596,7 +625,6 @@ main {
 }
 
 .projectDiv {
-  height: auto;
   position: relative;
   display: flex;
   flex-direction:row;
@@ -631,21 +659,9 @@ main {
   transition: all ease 300ms; 
 }
 
-.final {
-  font-family: Gothic;
-  position: absolute;
-  display: none;
-  padding-top: 7vh;
-  padding-bottom: 2vh;
-  background-color: var(--color-cardBG);
-  z-index: 0;
-  border-radius: 20px;
-  color: var(--color-para);
-  transition: all ease 300ms;
-}
 
 .education {
-  position: absolute;
+  position: relative;
   background-color: black;
   height: 60vh;
   width: 100vw;
@@ -671,39 +687,54 @@ main {
   top: -1vh;
 }
 
-#educationTitle {
-  top: -6vh;
-}
-
-.educationContainer {
-  position: relative;
-  width: 60vw;
-  height: 40vh;
-  border-radius: 2rem;
-  background-color: var(--color-cardBG);
-  margin: auto;
-  top: 15vh;
-}
 
 .blob-motion {
   position: absolute;
   transform: translateY(-20%);
 }
 .blobber1 {
-  position: relative;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
   z-index: 1;
-  top: -80vh;
   transform: rotate(180deg);
 }
 
 .blobber2 {
-  position: relative;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;  
   z-index: 1;
-  top: -180vh;
-  left: -34vw;
   transform: rotate(180deg);
 }
 
 .educationImg {
   margin: 2rem;
+}
+#educationTitle {
+  top: -6vh;
+}
+
+.educationContainer {
+ transition: all ease 300ms ;
+ position: relative;
+ width: 60vw;
+ height: 40vh;
+ border-radius: 2rem;
+ background-color: var(--color-cardBG);
+ margin: auto;
+ top: 15vh;
+ z-index: 10;
+}
+
+.educationContainer:hover {
+  transition: all ease 300ms;
+  translate: -10px -20px;
+  box-shadow: 11px 11px 25px -5px #526FC2;
+}
+
+.slideImg {
+  margin-left: 4vh;
+  width: 16vw;
+  height: 22vh;
 }

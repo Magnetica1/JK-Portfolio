@@ -48,7 +48,7 @@
     <a href="#skillsTitle" class="menuItem hover-underline-animation" id="skills-item">Skills</a>
     <a href="#projectsTitle" class="menuItem hover-underline-animation" id="projects-item">Projects</a>
     <a href="#experienceTitle" class="menuItem hover-underline-animation" id="work-item">Experience</a>
-    <a href="#abtme" class="menuItem hover-underline-animation" id="educ-item">Education</a>
+    <a href="#educationTitle" class="menuItem hover-underline-animation" id="educ-item">Education</a>
 </div>
 </nav>
 
@@ -116,9 +116,7 @@
 <div class="experience">
 
     <h2 class="subtitle" id="experienceTitle">Experience</h2>
-    <div class="experienceContent">
-        <a onClick="document.getElementById('final').style.display='block'" class="dropbtn"><img class="downArrow" src="./downArrow.png" alt="Down arrows"></a>
-        
+    <div class="experienceContent">        
         <h3 class="work1" id="mcD">McDonald's</h3>
         <ol class="initial">
             <li class="initialContent">INTERACT WITH CUSTOMERS</li>
@@ -126,7 +124,8 @@
             <li class="initialContent">KEEP ALL AREAS CLEAN AND SANITARY</li>
         </ol>
 
-        <ol class="final" id="final">
+        <div class="final">
+        <ol id="final">
             <li>Greet customers, take their orders and process payments.</li>                       
             <li>Prepare food and drink</li>
             <li>Manage deliveries and online orders</li>
@@ -134,6 +133,7 @@
             <li>Whether you work in the kitchen, at the drive-thru or at the counter, you are part of a dynamic team that works together to deliver an exceptional customer experience.</li>
             <li>Keep all areas clean and sanitary to ensure your safety, that of our customers and your colleagues.</li>
         </ol>
+    </div>
         <div class="files">
 
         </div>
@@ -144,6 +144,7 @@
     <h2 class="subtitle" id="educationTitle">Education</h2>
     <div class="educationContainer">
         <img src="./school_FILL0_wght400_GRAD0_opsz48.svg" alt="education" class="educationImg">
+        <img src="./moshIcon.jpeg" alt="education" class="educationImg">
         <h3>High school</h3>
     </div>
 <div class="blobber1">  
@@ -197,8 +198,7 @@
     <h2 class="subtitle" id="projectsTitle">Projects</h2>
     <div class="projectDiv">
     <div id="project1" class="project">
-        <h3 class="projectSub">Infinite Grid of Cards</h3>
-
+        <h3 class="projectSub">Infinite Grid of Cards</h3>  
           <video class="video" loop autoplay muted>
             <source src="infinite.mp4">
         </video>
@@ -206,25 +206,23 @@
         <p class="projectPara">Lorem ipsum dolor sit amet consectetur, adipisicing elit. <code class="highlight">Deleniti </code> sunt accusantium dolor ex! Vel!</p>
     </div>
     <div id="project2" class="project">
-        <h3 class="projectSub">Science Project Summary</h3>
+        <h3 class="projectSub">Science Summary</h3>
  
         <div class="mySlides fade">
-    <div class="numbertext">1 / 3</div>
-    <img src="img1.jpg" style="width:100%">
-    <div class="text">Caption Text</div>
+    <img src="img1.jpg" class="slideImg"> 
   </div>
 
-  <div class="mySlides fade">
+  <!-- <div class="mySlides fade">
     <div class="numbertext">2 / 3</div>
-    <img src="img2.jpg" style="width:100%">
+    <img src="img2.jpg" class="slideImg">
     <div class="text">Caption Two</div>
   </div>
 
   <div class="mySlides fade">
     <div class="numbertext">3 / 3</div>
-    <img src="img3.jpg" style="width:100%">
+    <img src="img3.jpg" class="slideImg">
     <div class="text">Caption Three</div>
-  </div>
+  </div> -->
 
         <p class="projectPara">Lorem ipsum dolor sit amet consectetur, adipisicing elit. <code class="highlight">Deleniti </code> sunt accusantium dolor ex! Vel!</p>
     </div>
@@ -232,22 +230,20 @@
         <h3 class="projectSub">3D Projects</h3>
  
         <div class="mySlides fade">
-    <div class="numbertext">1 / 3</div>
-    <img src="img1.jpg" style="width:100%">
-    <div class="text">Caption Text</div>
+    <img src="img1.jpg" class="slideImg">
   </div>
 
-  <div class="mySlides fade">
+  <!-- <div class="mySlides fade">
     <div class="numbertext">2 / 3</div>
-    <img src="img2.jpg" style="width:100%">
+    <img src="img2.jpg" class="slideImg">
     <div class="text">Caption Two</div>
   </div>
 
   <div class="mySlides fade">
     <div class="numbertext">3 / 3</div>
-    <img src="img3.jpg" style="width:100%">
+    <img src="img3.jpg" class="slideImg">
     <div class="text">Caption Three</div>
-  </div>
+  </div> -->
 
         <p class="projectPara">Lorem ipsum dolor sit amet consectetur, adipisicing elit. <code class="highlight">Deleniti </code> sunt accusantium dolor ex! Vel!</p>
     </div>
@@ -255,22 +251,20 @@
         <h3 class="projectSub">Games</h3>
  
         <div class="mySlides fade">
-    <div class="numbertext">1 / 3</div>
-    <img src="img1.jpg" style="width:100%">
-    <div class="text">Caption Text</div>
+    <img src="img1.jpg" class="slideImg">
   </div>
 
-  <div class="mySlides fade">
+  <!-- <div class="mySlides fade">
     <div class="numbertext">2 / 3</div>
-    <img src="img2.jpg" style="width:100%">
+    <img src="img2.jpg" class="slideImg">
     <div class="text">Caption Two</div>
   </div>
 
   <div class="mySlides fade">
     <div class="numbertext">3 / 3</div>
-    <img src="img3.jpg" style="width:100%">
+    <img src="img3.jpg" class="slideImg">
     <div class="text">Caption Three</div>
-  </div>
+  </div> -->
 
         <p class="projectPara">(Unity Javascript) Lorem ipsum dolor sit amet consectetur, adipisicing elit. <code class="highlight">Deleniti </code> sunt accusantium dolor ex! Vel!</p>
     </div>
@@ -278,29 +272,40 @@
         <h3 class="projectSub">Hackathons</h3>
  
         <div class="mySlides fade">
-    <div class="numbertext">1 / 3</div>
-    <img src="img1.jpg" style="width:100%">
-    <div class="text">Caption Text</div>
+    <img src="img1.jpg" class="slideImg">
   </div>
 
-  <div class="mySlides fade">
+  <!-- <div class="mySlides fade">
     <div class="numbertext">2 / 3</div>
-    <img src="img2.jpg" style="width:100%">
+    <img src="img2.jpg" class="slideImg">
     <div class="text">Caption Two</div>
   </div>
 
   <div class="mySlides fade">
     <div class="numbertext">3 / 3</div>
-    <img src="img3.jpg" style="width:100%">
+    <img src="img3.jpg" class="slideImg">
     <div class="text">Caption Three</div>
-  </div>
+  </div> -->
 
-        <p class="projectPara">Lorem ipsum dolor sit amet consectetur, adipisicing elit. <code class="highlight">Deleniti </code> sunt accusantium dolor ex! Vel!</p>
+  <p class="projectPara">(Unity Javascript) Lorem ipsum dolor sit amet consectetur, adipisicing elit. <code class="highlight">Deleniti </code> sunt accusantium dolor ex! Vel!</p>
     </div>
     <div id="project6" class="project">
         <h3 class="projectSub">Portoflios</h3>
+            <div class="mySlides fade">
+    <img src="img1.jpg" class="slideImg">
+  </div>
 
-        <p class="projectPara">Lorem ipsum dolor sit amet consectetur, adipisicing elit. <code class="highlight">Deleniti </code> sunt accusantium dolor ex! Vel!</p>
+  <!-- <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="img2.jpg" class="slideImg">
+    <div class="text">Caption Two</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="img3.jpg" class="slideImg">
+    <div class="text">Caption Three</div>
+  </div> -->
     </div>
 </div>
 </div>
