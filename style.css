@@ -6,7 +6,7 @@
   --color-highlight: #619DCA;
   --color-text-muted: #333333;
   --color-footer: #526FC2;
-  --color-blured: rgba(0, 0, 49, 0.5);
+  --color-blured: rgba(151, 151, 255, 0.5);
   --color-underline: #005e8d;
   --color-cardBG: #361F81;
   --color-paraMuted: #858282;
@@ -121,8 +121,7 @@ html {
   margin: 0;
   color: var(--color-para);
   font-family: Gothic;
-  font-size: 2.4vh;
-  font-weight: 600;
+  font-size: 3.3vh;
 }
 
 #abtme {
@@ -172,8 +171,8 @@ footer{
   position: absolute;
   top: 500vh;
   margin: 0;
-  background-color: var(--color-project);
-  border-radius: 1.5vh;
+  background-color: black;
+  border-radius: 50%;
   width: 100vw;
   height: 40vh;
 }
@@ -260,7 +259,7 @@ footer{
 }
 
 .rectMenu {
-  z-index: 10;
+  z-index: 1000;
   padding: 0;
   top: 0px;
   position: fixed;
@@ -710,6 +709,8 @@ main {
 
 .educationImg {
   margin: 2rem;
+  margin-bottom: 0.2vh;
+  width: 5vw;
 }
 #educationTitle {
   top: -6vh;
@@ -738,3 +739,25 @@ main {
   width: 16vw;
   height: 22vh;
 }
+
+.educationCaption {
+  font-family: Gothic;
+  font-size: 4vh;
+  word-spacing: -0.5vw;
+  text-align: center;
+  width: calc(5vw + 4rem);
+}
+.moshSection {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+.fireShipSection {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -65%);
+}
+
