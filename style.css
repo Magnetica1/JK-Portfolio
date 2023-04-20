@@ -53,7 +53,6 @@ html {
   position: fixed;
   font-size: 9vh;
   color: var(--color-title);
-  
 }
 
 .pfp {
@@ -165,11 +164,10 @@ html {
 
 /* ----------------FOOTER---------------- */
 
-footer{
+footer {
   z-index: 1;
   font-size: 5.5vh;
   position: absolute;
-  top: 500vh;
   margin: 0;
   background-color: black;
   border-radius: 50%;
