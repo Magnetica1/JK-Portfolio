@@ -134,7 +134,7 @@ html {
 }
 
 
-.topTriangle {
+/* .topTriangle {
   backdrop-filter: blur(8px);
   z-index: 10;
   top: -10vh;
@@ -160,7 +160,7 @@ html {
   left: 0.1vw;
   padding: 0;
   clip-path: revert;
-}
+} */
 
 .rectMenu {
   z-index: 1000;
@@ -175,35 +175,37 @@ html {
 .menutItems {
   display: flex;
   justify-content: space-between;
-  width: 87.5vw;
+  width: 85.5vw;
   position: fixed;
   z-index: 1000;
-  left: 5.5vw;
+  left: 6.5VW;
 }
 
 .menuItem {
+  position: relative;
   text-decoration: none;
   z-index: 100;
   font-weight: bold;
   font-family: Nunito;
-  font-size: 5vh;
+  font-size: 6vh;
   color: var(--color-menu-subtitle);
-  left: 6vw;
-  top: 1vh;
+  left: 0.4vw;
+  top: 2vh;
 }
 
 .hover-underline-animation:after {
   content: "";
   position: absolute;
-  width: 13vw;
+  width: 14vw;
   transform: scaleX(0);
-  height: 2px;
+  height: 0.7vh;
   bottom: 0;
   /* Might need to be changed for eahc individual one */
   left: 0;
   background-color: var(--color-underline);
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
+  border-radius: 1000rem;
 }
 /* This part has been checked()underneath not the preoblem */
 .hover-underline-animation:hover:after {
@@ -215,6 +217,7 @@ html {
   backdrop-filter: blur(8px);
   width: 87.5vw;
   height: 10vh;
+  border-radius: 2rem;
 }
 
 /* ----------------MAIN 💯---------------- */
